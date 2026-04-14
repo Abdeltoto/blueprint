@@ -33,6 +33,10 @@ Use the `icon` prop on individual breadcrumb items to display an icon before the
 that exceed the available space. Use the `minVisibleItems` prop to guarantee a
 minimum number of items remain visible.
 
+When customizing `breadcrumbRenderer`, remember that visible breadcrumbs are rendered through **OverflowList**'s
+`visibleItemRenderer` pattern — each returned element still needs a stable `key`. See
+[**OverflowList**](#core/components/overflow-list) (usage notes).
+
 @reactCodeExample BreadcrumbsOverflowExample
 
 @### Customizing breadcrumbs

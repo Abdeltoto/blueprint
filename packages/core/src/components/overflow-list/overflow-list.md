@@ -21,6 +21,19 @@ import { OverflowList } from "@blueprintjs/core";
 
 @reactExample OverflowListExample
 
+@## Usage notes
+
+The `visibleItemRenderer` callback is invoked inside an internal `.map()`, so you **must** return an element with a
+unique `key` prop. Otherwise React will emit a warning: _Each child in a list should have a unique "key" prop_.
+
+```tsx
+// ✅ Correct — element includes a unique `key`
+visibleItemRenderer={(item) => <Tag key={item.id}>{item.name}</Tag>}
+
+// ❌ Incorrect — will cause a React key warning
+visibleItemRenderer={(item) => <Tag>{item.name}</Tag>}
+```
+
 @## Props interface
 
 @interface OverflowListProps

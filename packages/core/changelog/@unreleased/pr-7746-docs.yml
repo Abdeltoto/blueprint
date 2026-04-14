@@ -1,0 +1,5 @@
+type: improvement
+improvement:
+  description: Document that OverflowList `visibleItemRenderer` requires a `key` on returned elements (#7746).
+  links:
+  - https://github.com/palantir/blueprint/issues/7746
